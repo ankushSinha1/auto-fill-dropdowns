@@ -4,11 +4,11 @@ import router from './routes.js';
 import dotenv from 'dotenv'
 const app = express()
 app.use(cors({
-    origin: 'https://dropdowns-5qql.onrender.com/',
+    origin: 'https://dropdowns-5qql.onrender.com',
     credentials: true,
 }))
 dotenv.config()
 app.use('/', router);
-app.listen(process.env.PORT, () => {
-    console.log(`Server running at: ${process.env.PORT}`)
+app.listen(() => {
+    console.log(`Server running`)
 })
