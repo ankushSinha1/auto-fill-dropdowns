@@ -4,7 +4,7 @@ import router from './routes.js';
 import dotenv from 'dotenv'
 const app = express()
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://dropdowns-i47a.onrender.com',
     credentials: false,
 }))
 dotenv.config()
