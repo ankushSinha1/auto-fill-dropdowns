@@ -7,7 +7,7 @@ const DropDowns = () => {
     const [cities, setCities] = useState([]);
     useEffect(()=>{
         //API call to fetch all the countries
-        router.get('/countries')
+        router.get('countries')
         .then((res)=>{
             //Setting the state countries to fetched data
             setCountries(res.data.data)
@@ -19,7 +19,7 @@ const DropDowns = () => {
     },[])
     const getStates = (country_id) => {
         //API call to fetch all the states
-        router.get('/states')
+        router.get('states')
         .then(res => {
             let array = [];
             //Filtering the states for the selected country only
@@ -37,7 +37,7 @@ const DropDowns = () => {
     }
     const getCities = (state_id) =>{
         //API call to fetch all the cities 
-        router.get('/cities')
+        router.get('cities')
         .then(res => {
             let array = [];
             //Filtering the cities for the selected state only
