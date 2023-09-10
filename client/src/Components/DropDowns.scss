@@ -2,21 +2,26 @@
     font-family: inherit;
     display: flex;
     justify-content: space-between;
-    padding: 4rem;
+    // align-items: center;
+    padding: 5rem;
+    width: 50%;
+    margin: 0 auto;
     & > *{
         cursor: pointer;
         height: 3rem;
+        width: 100%;
         border: none;
         background-color: rgb(222, 217, 217);
         font-family: inherit;
-        // font-size: 1.6rem;
-        min-width: 20rem;
-        overflow: auto;
         padding: 0 2rem;
         border-radius: 4px;
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
         & > *{
-            font-size: 1.6rem;
-            cursor: pointer;
+            & select{
+                cursor: pointer;
+            }
             background-color: rgb(222, 217, 217);
         }
         &:focus{
