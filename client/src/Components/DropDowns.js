@@ -68,9 +68,9 @@ const DropDowns = () => {
             }
         </select>
         <select className='dropdown__state' onChange={(e)=>getCities(e.target.value)}>
+            <option defaultValue={true}> -Select state- </option>
             {
                 states[0] ? states.map((state)=>{
-                    <option defaultValue={true}> -Select state- </option>
                     return(
                         <option 
                         key={state.id} 
@@ -79,13 +79,13 @@ const DropDowns = () => {
                             {state.name}
                         </option>
                     )
-                }) : <option>No States</option>
+                }) : <></>
             }
         </select>
         <select className='dropdown__city'>
+            <option defaultValue={true}> -Select city- </option>
             {
                 cities[0] ? cities.map((city)=>{
-                <option defaultValue={true}> -Select city- </option>
                     return(
                         <option 
                         key={city.id} 
@@ -94,7 +94,7 @@ const DropDowns = () => {
                             {city.name}
                         </option>
                     )
-                }) : <option>No Cities</option>
+                }) : <></>
             }
         </select>
     </div>
