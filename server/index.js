@@ -9,6 +9,6 @@ app.use(cors({
 }))
 dotenv.config()
 app.use('/', router);
-app.listen(() => {
-    console.log(`Server running`)
+app.listen( () => {
+    console.log(`Server running at: ${process.env.PORT}`)
 })
